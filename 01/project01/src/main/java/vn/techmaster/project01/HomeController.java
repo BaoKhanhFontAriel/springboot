@@ -59,7 +59,8 @@ public class HomeController {
 
     @PostMapping("/student")
     @ResponseBody
-    public void postStudents(@RequestBody Student student){
+    public List<Student> postStudents(@RequestBody Student student){
         students.add(student);
+        return students;
     }
 }
