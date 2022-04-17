@@ -1,6 +1,6 @@
 1. groupID: là tên miền đảo ngược, dùng để phân biệt tổ chức, công ty sở hữu
     artifactId: là tên package chính và cũng là tên thư mục dự án
-2. 
+2. đảo ngược tên miền trong groupID để tránh trùng tên file như khi các file có cùng tên nhưng thuộc folder khác nhau.
 3. 2 công cụ quản lý thư viện là maven và gradle
 4.  file pom.xml là nơi khai báo tất cả những gì liên quan đến dự án được cấu hính qua maven
 5. thể <dependency> dùng để khai báo các thư viện
