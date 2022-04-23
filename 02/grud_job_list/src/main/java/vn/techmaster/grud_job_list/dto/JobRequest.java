@@ -1,4 +1,4 @@
-package vn.techmaster.dto;
+package vn.techmaster.grud_job_list.dto;
 
 import vn.techmaster.grud_job_list.model.Location;
 

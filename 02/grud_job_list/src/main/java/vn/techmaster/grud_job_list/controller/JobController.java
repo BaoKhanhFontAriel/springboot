@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import vn.techmaster.dto.JobRequest;
+import vn.techmaster.grud_job_list.dto.JobRequest;
 import vn.techmaster.grud_job_list.model.Job;
 import vn.techmaster.grud_job_list.model.Location;
 
