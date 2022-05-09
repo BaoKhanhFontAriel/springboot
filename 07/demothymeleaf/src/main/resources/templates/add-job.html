@@ -25,8 +25,8 @@
           <div class="row">
             <div class="col-3"></div>
             <div class="col-6 d-flex justify-content-center">
-              <div class="title-font-blue">
-                <h1>THÊM NHÀ TUYỂN DỤNG</h1>
+              <div class="title-font-tomato">
+                <h1>TẠO VIỆC LÀM</h1>
               </div>
             </div>
             <div class="col-3"></div>
@@ -37,8 +37,8 @@
           <div class="col-6">
             <form
               action="#"
-              th:action="@{/add-employer}"
-              th:object="${employerRequest}"
+              th:action="@{/add-job}"
+              th:object="${job}"
               method="post"
             >
               <div class="div mb-3">
@@ -51,22 +51,42 @@
                 />
               </div>
               <div class="div mb-3">
-                <label class="form-label" for="address">Địa chỉ</label>
-                <input class="form-control" type="text" id="address"
-                th:field="*{address}"
-              </div>
-              <div class="div mb-3">
-                <label class="form-label" for="business-activies"
-                  >Lĩnh vực kinh doanh</label
-                ><br />
+                <label class="form-label" for="company">Công ty</label>
                 <input
                   class="form-control"
                   type="text"
-                  id="business-activies"
-                  th:field="*{businessActivities}"
+                  id="company"
+                  th:field="*{company}"
                 />
               </div>
-              <button class="btn btn-primary" type="submit">Submit</button>
+              <div class="div mb-3">
+                <label class="form-label" for="salary">Lương</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="salary"
+                  th:field="*{salary}"
+                />
+              </div>
+              <div class="div mb-3">
+                <label class="form-label" for="description">Mô tả</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="description"
+                  th:field="*{description}"
+                />
+              </div>
+              <div class="div mb-3">
+                <label class="form-label" for="location">Địa điểm</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="location"
+                  th:field="*{location}"
+                />
+              </div>
+              <button class="btn btn-danger" type="submit">Submit</button>
             </form>
           </div>
           <div class="col-3"></div>

@@ -1,0 +1,86 @@
+.card {
+}
+
+.container {
+  height: 100vh;
+}
+
+body {
+  /* background-color: aliceblue; */
+}
+
+.employer {
+  height: 200px;
+}
+
+.employer .title-col {
+  text-align: start;
+  color: dodgerblue;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.employer .link-col {
+  background-color: dodgerblue;
+}
+
+.job .title-col {
+  text-align: start;
+  color: tomato;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.job .link-col {
+  background-color: tomato;
+}
+
+.applicant .title-col {
+  text-align: start;
+  color: seagreen;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.applicant .link-col {
+  background-color: seagreen;
+}
+
+.employer a {
+  text-decoration: none;
+}
+
+.job a {
+  text-decoration: none;
+  color: tomato;
+}
+.applicant a {
+  text-decoration: none;
+  color: seagreen;
+}
+.list-group-item:hover {
+  border: 3px solid black;
+  font-style: bold;
+}
+
+.title-font-blue {
+  color: dodgerblue;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.title-font-tomato {
+  color: tomato;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.title-font-seagreen {
+  color: seagreen;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.form {
+  background-color: white;
+}

@@ -18,4 +18,6 @@ public class Applicant {
     private int age;
     private Boolean sex;
     private String education;
+    private String email;
+    private String phoneNumbers;
 }

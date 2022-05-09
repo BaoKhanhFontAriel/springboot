@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 public class Job {
     private String name;
+    private String company;
     private int salary;
     private String description;
     private String location;

@@ -26,8 +26,8 @@
     <header class="title-font-blue">
       <div class="row">
         <div class="col-3"></div>
-        <div class="col-6 text-center">
-          <h1>Danh sách nhà tuyển dụng</h1>
+        <div class="col-6 text-center title-font-seagreen">
+          <h1>Danh sách ứng viên</h1>
         </div>
         <div class="col-3"></div>
       </div>
@@ -36,19 +36,26 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Id</th>
-          <th scope="col">Name</th>
-          <th scope="col">Address</th>
-          <th scope="col">Business activities</th>
+          <th scope="col">Tên</th>
+          <th scope="col">Tuổi</th>
+          <th scope="col">Địa điểm</th>
+          <th scope="col">Giới tính</th>
+          <th scope="col">Trình độ học vấn</th>
+          <th scope="col">Email</th>
+          <th scope="col">Số điện thoại</th>
+
         </tr>
       </thead>
       <tbody>
-        <tr th:each="employer, iStat:${employers.values}">
+        <tr th:each="applicant, iStat:${applicants}">
           <th scope="row" th:text="${iStat.index} +1"></th>
-          <td th:text="${employer.id}"></td>
-          <td th:text="${employer.name}">Otto</td>
-          <td th:text="${employer.address }">@mdo</td>
-          <td th:text="${employer.businessActivities}">abc</td>
+          <td th:text="${applicant.name}">Otto</td>
+          <td th:text="${applicant.address }">@mdo</td>
+          <td th:text="${applicant.age}">abc</td>
+          <td th:text="${applicant.sex} ? 'Nam' : 'Nữ'"></td>
+          <td th:text="${applicant.education}"></td>
+          <td th:text="${applicant.email}"></td>
+          <td th:text="${applicant.phoneNumbers}"></td>
         </tr>
       </tbody>
     </table>

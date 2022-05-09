@@ -19,8 +19,8 @@ public class ApplicantController {
 
     @GetMapping("/add-applicant")
     public String showEmployerForm(Model model) {
-        model.addAttribute("employerRequest", new Applicant());
-        return "add-employer";
+        model.addAttribute("applicant", new Applicant());
+        return "add-applicant";
     }
 
     @PostMapping("/add-applicant")
@@ -28,14 +28,14 @@ public class ApplicantController {
             Model model, 
             RedirectAttributes redirAttrs) {
         applicantRepository.getApplicants().add(applicant);
-        model.addAttribute("employerRequest", applicant);
+        model.addAttribute("applicant", applicant);
         redirAttrs.addFlashAttribute("message", "Sucessful Submission");
         return "redirect:/add-applicant";
     }
 
     @GetMapping("/applicants")
     public String showEmployerList(Model model) {
-        model.addAttribute("employers", applicantRepository.getApplicants());
+        model.addAttribute("applicants", applicantRepository.getApplicants());
         return "applicants";
     }
 }

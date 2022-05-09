@@ -26,7 +26,7 @@
             <div class="col-3"></div>
             <div class="col-6 d-flex justify-content-center">
               <div class="title-font-blue">
-                <h1>THÊM NHÀ TUYỂN DỤNG</h1>
+                <h1 class="title-font-seagreen">THÊM ỨNG VIÊN</h1>
               </div>
             </div>
             <div class="col-3"></div>
@@ -37,8 +37,8 @@
           <div class="col-6">
             <form
               action="#"
-              th:action="@{/add-employer}"
-              th:object="${employerRequest}"
+              th:action="@{/add-applicant}"
+              th:object="${applicant}"
               method="post"
             >
               <div class="div mb-3">
@@ -52,21 +52,63 @@
               </div>
               <div class="div mb-3">
                 <label class="form-label" for="address">Địa chỉ</label>
-                <input class="form-control" type="text" id="address"
-                th:field="*{address}"
+                <input
+                  class="form-control"
+                  type="text"
+                  id="address"
+                  th:field="*{address}"
+                />
               </div>
               <div class="div mb-3">
-                <label class="form-label" for="business-activies"
-                  >Lĩnh vực kinh doanh</label
+                <label class="form-label" for="age">Tuổi</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="age"
+                  th:field="*{age}"
+                />
+              </div>
+              <div class="div mb-3">
+                <label class="form-label" for="sex">Giới tính</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="sex"
+                  th:field="*{sex}"
+                />
+              </div>
+              <div class="div mb-3">
+                <label class="form-label" for="education">Trình độ học vấn</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="education"
+                  th:field="*{education}"
+                />
+              </div>
+              <div class="div mb-3">
+                <label class="form-label" for="email"
+                  >Email</label
                 ><br />
                 <input
                   class="form-control"
                   type="text"
-                  id="business-activies"
-                  th:field="*{businessActivities}"
+                  id="email"
+                  th:field="*{email}"
                 />
               </div>
-              <button class="btn btn-primary" type="submit">Submit</button>
+              <div class="div mb-3">
+                <label class="form-label" for="phoneNumbers"
+                  >Số điện thoại</label
+                ><br />
+                <input
+                  class="form-control"
+                  type="text"
+                  id="phoneNumbers"
+                  th:field="*{phoneNumbers}"
+                />
+              </div>
+              <button class="btn btn-success" type="submit">Submit</button>
             </form>
           </div>
           <div class="col-3"></div>

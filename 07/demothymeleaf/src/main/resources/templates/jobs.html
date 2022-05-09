@@ -26,8 +26,8 @@
     <header class="title-font-blue">
       <div class="row">
         <div class="col-3"></div>
-        <div class="col-6 text-center">
-          <h1>Danh sách nhà tuyển dụng</h1>
+        <div class="col-6 text-center title-font-tomato">
+          <h1>Danh sách việc làm</h1>
         </div>
         <div class="col-3"></div>
       </div>
@@ -36,19 +36,21 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Id</th>
-          <th scope="col">Name</th>
-          <th scope="col">Address</th>
-          <th scope="col">Business activities</th>
+          <th scope="col">Tên</th>
+          <th scope="col">Công ty</th>
+          <th scope="col">Lương</th>
+          <th scope="col">Mô tả</th>
+          <th scope="col">Địa điểm</th>
         </tr>
       </thead>
       <tbody>
-        <tr th:each="employer, iStat:${employers.values}">
+        <tr th:each="job, iStat:${jobs}">
           <th scope="row" th:text="${iStat.index} +1"></th>
-          <td th:text="${employer.id}"></td>
-          <td th:text="${employer.name}">Otto</td>
-          <td th:text="${employer.address }">@mdo</td>
-          <td th:text="${employer.businessActivities}">abc</td>
+          <td th:text="${job.name}"></td>
+          <td th:text="${job.company}"></td>
+          <td th:text="${job.salary}">Otto</td>
+          <td th:text="${job.description }">@mdo</td>
+          <td th:text="${job.location}">abc</td>
         </tr>
       </tbody>
     </table>
