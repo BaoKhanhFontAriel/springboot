@@ -9,7 +9,6 @@ body {
   /* background-color: aliceblue; */
 }
 
-
 .employer .title-col {
   text-align: start;
   color: dodgerblue;
@@ -80,4 +79,9 @@ body {
 
 .form {
   background-color: white;
+}
+
+.avatar-box {
+  height: 140px;
+  width: 140px;
 }

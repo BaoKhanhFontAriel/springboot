@@ -9,9 +9,10 @@
       <thead>
         <tr>
           <th scope="col">#</th>
+          <th scope="col">Ảnh</th>
           <th scope="col">Tên</th>
           <th scope="col">Tuổi</th>
-          <th scope="col">Địa điểm</th>
+          <th scope="col">Địa chỉ</th>
           <th scope="col">Giới tính</th>
           <th scope="col">Trình độ học vấn</th>
           <th scope="col">Email</th>
@@ -21,10 +22,13 @@
       <tbody>
         <tr th:each="applicant, iStat:${applicants}">
           <th scope="row" th:text="${iStat.index} +1"></th>
+          <td>
+            <img th:src="|/photo/${applicant.avatar.getOriginalFilename}|" alt="avatar" width="40px" height="40px">
+          </td>
           <td th:text="${applicant.name}">Otto</td>
-          <td th:text="${applicant.address }">@mdo</td>
           <td th:text="${applicant.age}">abc</td>
-          <td th:text="${applicant.sex} ? 'Nam' : 'Nữ'"></td>
+          <td th:text="${applicant.address }">@mdo</td>
+          <td th:text="${applicant.gender == 0 ? 'Nam' : 'Nữ'}">Nam</td>
           <td th:text="${applicant.education}"></td>
           <td th:text="${applicant.email}"></td>
           <td th:text="${applicant.phoneNumbers}"></td>
