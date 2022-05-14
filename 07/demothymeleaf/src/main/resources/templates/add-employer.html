@@ -17,15 +17,35 @@
               th:object="${employerRequest}"
               method="post"
             >
-              <div
-                th:insert="~{template/template::input('name', *{name}, 'Tên')}"
-              ></div>
-              <div
-                th:insert="~{template/template::input('address', *{address}, 'Địa chỉ')}"
-              ></div>
-              <div
-                th:insert="~{template/template::input('business-activies', *{businessActivities}, 'Lĩnh vực kinh doanh')}"
-              ></div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="name">Tên</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="name"
+                  th:field="*{name}"
+                />
+              </div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="address">Địa chỉ</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="address"
+                  th:field="*{address}"
+                />
+              </div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="businessActivities"
+                  >Lĩnh vực kinh doanh</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="businessActivities"
+                  th:field="*{businessActivities}"
+                />
+              </div>
               <button class="btn btn-primary" type="submit">Submit</button>
             </form>
           </div>

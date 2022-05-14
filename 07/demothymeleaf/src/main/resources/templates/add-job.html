@@ -17,21 +17,51 @@
               th:object="${job}"
               method="post"
             >
-              <div
-                th:insert="~{template/template::input('name', *{name}, 'Công việc')}"
-              ></div>
-              <div
-                th:insert="~{template/template::input('company', *{company}, 'Công ty')}"
-              ></div>
-              <div
-                th:insert="~{template/template::input('salary', *{salary}, 'Lương')}"
-              ></div>
-              <div
-                th:insert="~{template/template::input('description', *{description}, 'Mô tả')}"
-              ></div>
-              <div
-                th:insert="~{template/template::input('location', *{location}, 'Địa điểm')}"
-              ></div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="name">Tên</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="name"
+                  th:field="*{name}"
+                />
+              </div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="company">Công ty</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="company"
+                  th:field="*{company}"
+                />
+              </div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="salary">Lương</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="salary"
+                  th:field="*{salary}"
+                />
+              </div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="description">Mô tả</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="description"
+                  th:field="*{description}"
+                />
+              </div>
+              <div class="form-input mb-3">
+                <label class="form-label" th:for="location">Địa điểm</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  th:id="location"
+                  th:field="*{location}"
+                />
+              </div>
 
               <button class="btn btn-danger" type="submit">Submit</button>
             </form>
