@@ -10,19 +10,24 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Id</th>
           <th scope="col">Name</th>
           <th scope="col">Address</th>
           <th scope="col">Business activities</th>
+          <th scope="col">Email</th>
+          <th scope="col">Số điện thoại</th>
         </tr>
       </thead>
       <tbody>
         <tr th:each="employer, iStat:${employers.values}">
           <th scope="row" th:text="${iStat.index} +1"></th>
-          <td th:text="${employer.id}"></td>
           <td th:text="${employer.name}">Otto</td>
           <td th:text="${employer.address }">@mdo</td>
           <td th:text="${employer.businessActivities}">abc</td>
+          <td th:text="${employer.email}"></td>
+          <td th:text="${employer.phoneNumbers}"></td>
+          <td>
+            <button class="btn btn-primary">Liên hệ</button>
+          </td>
         </tr>
       </tbody>
     </table>

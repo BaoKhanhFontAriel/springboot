@@ -28,12 +28,13 @@ public class EmployerController {
 
     @PostMapping("/add-employer")
     public String addNewEmployer(@ModelAttribute EmployerRequest employerRequest,
-            Model model, 
+            Model model,
             RedirectAttributes redirAttrs) {
         String id = UUID.randomUUID().toString();
         employerRepository.getEmployers().put(id,
                 new Employer(id, employerRequest.getName(), employerRequest.getAddress(),
-                        employerRequest.getBusinessActivities()));
+                        employerRequest.getBusinessActivities(), employerRequest.getEmail(),
+                        employerRequest.getPhoneNumbers()));
         model.addAttribute("employerRequest", employerRequest);
         redirAttrs.addFlashAttribute("message", "Sucessful Submission");
         return "redirect:/add-employer";

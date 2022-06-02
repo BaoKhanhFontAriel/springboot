@@ -62,7 +62,26 @@
                   th:field="*{location}"
                 />
               </div>
-
+              <div class="div mb-3">
+                <label class="form-label" for="email">Email</label><br />
+                <input
+                  class="form-control"
+                  type="text"
+                  id="email"
+                  th:field="*{email}"
+                />
+              </div>
+              <div class="div mb-3">
+                <label class="form-label" for="phoneNumbers"
+                  >Số điện thoại</label
+                ><br />
+                <input
+                  class="form-control"
+                  type="text"
+                  id="phoneNumbers"
+                  th:field="*{phoneNumbers}"
+                />
+              </div>
               <button class="btn btn-danger" type="submit">Submit</button>
             </form>
           </div>
